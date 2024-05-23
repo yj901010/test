@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-container">
+      <div class="header">
+        <br>
+        <div>로그인</div>
+      </div>
+      <div class="login-info">
+        <form action="/login" method="post">  <!-- 폼 추가 -->
+          <div class="login-info-email">
+            <div>* 이메일</div>
+            <input type="email" name="email">  <!-- name 속성 추가 -->
+          </div>
+          <div class="login-info-pw">
+            <div>* 비밀번호</div>
+            <input type="password" name="password">  <!-- name 속성 추가 -->
+          </div>
+          <div class="btn">
+            <button type="submit">로그인</button>  <!-- type="submit" 추가 -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="/js/sign.js"></script>
+</body>
+</html>

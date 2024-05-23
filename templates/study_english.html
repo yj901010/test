@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../static/css/study.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<title>게시판</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/">TalkTalk</a></div>
+        <div class="menu">
+            <div class="dropdown">
+                <button class="dropbtn">Study</button>
+                <div class="dropdown-content">
+                    <a href="#" data-lang="english">English</a>
+                    <a href="#" data-lang="japanese">Japanese</a>
+                    <a href="#" data-lang="chinese">Chinese</a>
+                    <a href="#" data-lang="spanish">Spanish</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Community</button>
+                <div class="dropdown-content">
+                    <a href="#">자유 게시판</a>
+                    <a href="#">책 사고팔기</a>
+                    <a href="#">스터디 모집</a>
+                </div>
+            </div>
+            <a href="/about">About</a>
+        </div>
+        <a href="/join" class="signin">Sign In</a>
+    </nav>
+    <div class="card">
+        <div class="card-header"><h1 id="boardTitle">게시판</h1></div>
+        <div class="card-body">
+            <input type="search" placeholder="검색어를 입력하세요.">
+            <a class="search" href="#">검색</a>
+        </div>
+        <div id="contentList"></div>
+        <ul class="number">
+            <li><a href="#">&lt;</a></li>
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">&gt;</a></li>
+        </ul>
+    </div>
+    <div class="btn">
+        <a href="/write">글쓰기</a>
+    </div>
+    <script src="../static/js/common.js"></script>
+</body>
+</html>

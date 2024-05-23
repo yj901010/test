@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/study.css">
+    <title>글쓰기</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/">TalkTalk</a></div>
+        <div class="menu">
+            <div class="dropdown">
+                <button class="dropbtn">Study</button>
+                <div class="dropdown-content">
+                    <a href="/study_english">English</a>
+                    <a href="/study_japanese">Japanese</a>
+                    <a href="/study_chinese">Chinese</a>
+                    <a href="/study_spanish">Spanish</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Community</button>
+                <div class="dropdown-content">
+                    <a href="#">자유 게시판</a>
+                    <a href="#">책 사고팔기</a>
+                    <a href="#">스터디 모집</a>
+                </div>
+            </div>
+            <a href="about">About</a>
+        </div>
+        <a href="/join" class="signin">Sign In</a>
+    </nav>
+    <div class="card">
+        <div class="card-header">
+            <h1>글쓰기</h1>
+        </div>
+        <div class="card-write">
+            <form id="writeForm">
+                <div class="myinfo">
+                    <input type="text" id="username" placeholder="이름을 입력하세요." readonly>
+                    <input type="password" id="password" placeholder="비밀번호를 입력하세요.">
+                </div>
+                <div class="title-w">
+                    <input type="text" id="title" placeholder="제목을 입력하세요.">
+                </div>
+                <div class="msg">
+                    <textarea id="content" placeholder="내용을 입력하세요."></textarea>
+                    <input type="file" id="file" name="file">
+                </div>
+                <div class="btn">
+                    <button type="submit">작성</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/study_e.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loggedInUser = localStorage.getItem('username');
+        if (loggedInUser) {
+            document.getElementById('username').value = loggedInUser;
+        } else {
+            alert('로그인 후 글 작성이 가능합니다.');
+            window.location.href = '/join';
+        }
+    });
+    </script>
+</body>
+</html>

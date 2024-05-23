@@ -1,0 +1,306 @@
+/* Global settings */
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+    background-color: #f4f4f8;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #9c27b0;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+}
+
+.navbar a, .navbar .dropbtn {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #9c27b0;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: none;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #9c27b0;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropbtn {
+    background-color: #9c27b0;
+    border: none;
+}
+
+.dropdown .dropbtn:hover, .navbar a:hover {
+    background-color: #555;
+    border: none;
+}
+
+.logo a, .menu a, .signin {
+    background-color: #9c27b0;
+    border: none;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+/* Main content and footer styles */
+.container, .header-content, .main-content, .footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-content {
+    background-color: #e1bee7;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url('../../img/h1_hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    position: relative;
+}
+
+.header-content .text-content {
+    font-size: 2.3em;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    width: calc(100% - 200px);
+    text-align: left;
+}
+
+/* Card styles */
+.card {
+    width: 900px; /* 너비를 1.5배로 키움 */
+    margin: 150px auto; /* 여백을 1.5배로 키움 */
+    box-shadow: 3px 3px 50px #e6e6e6;
+    border-radius: 20px;
+    position: relative;
+    background-color: white;
+}
+
+.card-header {
+    padding: 30px; /* 패딩을 1.5배로 키움 */
+    text-align: center;
+    background-color: #9c27b0;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-header h1 {
+    font-size: 45px; /* 글씨 크기를 1.5배로 키움 */
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 30px; /* 패딩을 1.5배로 키움 */
+    text-align: center;
+}
+
+.card-body input[type="search"] {
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    margin-bottom: 15px; /* 마진을 1.5배로 키움 */
+    border: 1px solid #999;
+    border-radius: 10px;
+    width: 450px; /* 너비를 1.5배로 키움 */
+    font-size: 24px; /* 글씨 크기를 1.5배로 키움 */
+}
+
+.card-body .search {
+    padding: 15px 22.5px; /* 패딩을 1.5배로 키움 */
+    margin-left: 15px; /* 마진을 1.5배로 키움 */
+    border-radius: 10px;
+    background-color: tomato;
+    color: #fff;
+}
+
+.card-body div {
+    margin-top: 15px; /* 마진을 1.5배로 키움 */
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.card-body .content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+}
+
+.card-body .content-box .title {
+    flex: 1;
+    text-align: left;
+    white-space: nowrap; /* 한 줄로 표시 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 표시 */
+}
+
+.card-body .content-box .title a {
+    color: black; /* 하이퍼링크 색상 변경 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.card-body .content-box .title a:hover {
+    color: gray; /* 호버 시 색상 변경 (선택 사항) */
+}
+
+.card-body .content-box .author {
+    flex: 0 0 150px;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.number {
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    font-size: 0.8em; /* 크기를 0.8배로 축소 */
+}
+
+.number li {
+    display: inline-block;
+}
+
+.number li a {
+    display: block;
+    width: 48px; /* 너비를 0.8배로 줄임 */
+    line-height: 48px; /* 높이를 0.8배로 줄임 */
+    border-radius: 10px;
+    margin: 3.6px; /* 마진을 0.8배로 줄임 */
+    margin-top: 24px; /* 마진을 0.8배로 줄임 */
+    box-shadow: 0 5px 10px #1f1f1f;
+}
+
+.number li a.active {
+    background-color: rgb(252, 212, 205);
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    margin: 15px 15px 30px 15px; /* 마진을 1.5배로 키움 */
+}
+
+.btn a {
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    background-color: tomato;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Form styles */
+.card-write {
+    padding: 30px; /* 패딩을 1.5배로 키움 */
+}
+
+.card-write input, textarea {
+    margin-left: 15px; /* 마진을 1.5배로 키움 */
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    border: 1px solid #999;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #e6e6e6;
+    width: calc(100% - 60px); /* 너비를 1.5배로 키움 */
+}
+
+.card-write input[type="file"] {
+    border: none;
+    box-shadow: none;
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    margin-left: 60px; /* 마진을 1.5배로 키움 */
+}
+
+.card-write .myinfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-write .title-w input[type="text"] {
+    margin-top: 30px; /* 마진을 1.5배로 키움 */
+    margin-bottom: 30px; /* 마진을 1.5배로 키움 */
+}
+
+.card-write .msg textarea {
+    min-height: 300px; /* 높이를 1.5배로 키움 */
+    max-height: 300px; /* 높이를 1.5배로 키움 */
+    box-shadow: inset 3px 3px 10px #e6e6e6;
+    vertical-align: top;
+}
+
+.btn-w a {
+    background-color: tomato;
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .header-content, .main-content, .footer {
+        padding: 10px;
+    }
+
+    .header-content h1, .header-content p {
+        margin-left: 0;
+    }
+}

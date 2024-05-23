@@ -1,0 +1,42 @@
+<!-- nav.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation</title>
+<link rel="stylesheet" href="../static/css/style.css">
+<style>
+    /* Nav 바 스타일 */
+    nav.navbar {
+        width: 100%; /* 화면 전체 너비를 차지하도록 설정 */
+    }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo"><a href="/main">TalkTalk</a></div>
+    <div class="menu">
+        <div class="dropdown">
+            <button class="dropbtn">Study</button>
+            <div class="dropdown-content">
+                <a href="/study_english">English</a>
+                <a href="/study_japanese">Japanese</a>
+                <a href="/study_chinese">Chinese</a>
+                <a href="/study_spanish">Spanish</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Community</button>
+            <div class="dropdown-content">
+                <a href="#">자유 게시판</a>
+                <a href="#">책 사고팔기</a>
+                <a href="#">스터디 모집</a>
+            </div>
+        </div>
+        <a href="/about">About</a>
+    </div>
+    <a href="signin.html" class="signin">Sign In</a>
+</nav>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../static/css/study.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<title>글 보기</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/">TalkTalk</a></div>
+        <div class="menu">
+            <div class="dropdown">
+                <button class="dropbtn">Study</button>
+                <div class="dropdown-content">
+                    <a href="#" data-lang="english">English</a>
+                    <a href="#" data-lang="japanese">Japanese</a>
+                    <a href="#" data-lang="chinese">Chinese</a>
+                    <a href="#" data-lang="spanish">Spanish</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Community</button>
+                <div class="dropdown-content">
+                    <a href="#">자유 게시판</a>
+                    <a href="#">책 사고팔기</a>
+                    <a href="#">스터디 모집</a>
+                </div>
+            </div>
+            <a href=/about">About</a>
+        </div>
+        <a href="/join" class="signin">Sign In</a>
+    </nav>
+    <div class="card">
+        <div class="card-header"><h1 id="postTitle">글 제목</h1></div>
+        <div class="card-body">
+            <div id="postContent">글 내용 로드 중...</div>
+            <div class="author" id="postAuthor"></div>
+        </div>
+    </div>
+    <div class="comment-section">
+        <h2>댓글</h2>
+        <ul id="commentList"></ul>
+        <input type="text" id="commentInput" placeholder="댓글을 입력하세요">
+        <button id="commentSaveBtn">댓글 등록</button>
+    </div>
+    <script src="../static/js/common.js"></script>
+    <script src="../static/js/detail.js"></script>
+    <script src="../static/js/comment.js"></script>
+</body>
+</html>
